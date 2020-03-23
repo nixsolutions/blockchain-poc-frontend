@@ -1,0 +1,22 @@
+$colors: (
+  "primary": #fff,
+  "black": #000,
+  "accent": #2196F3,
+  "accent-light": #D6ECFD,
+  "accent-hover": rgba(25, 146, 242, 0.8),
+  "bg-light": #FAFCFF,
+  "bg": #EFF5FC,
+  "border": #E5EEF7,
+  "title": #323943,
+  "light-title": #6C7D96,
+  "green": #66BB6A,
+  "light-green": #ECF9EC,
+  "plaseholder": #BDCBE0,
+  "red": #E95350,
+  "reject": #F9A825,
+  "light-red": #FDE3E6
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}

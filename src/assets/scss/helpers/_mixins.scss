@@ -1,0 +1,27 @@
+@mixin col-width($size) {
+  @if $size==null {
+    @for $i from 1 through ($col-count) {
+      .col-#{$i} {
+        flex: 0 1 auto;
+        width: $i * 100% / $col-count;
+      }
+    }
+  } @else {
+    @for $i from 1 through ($col-count) {
+      .col-#{$size}-#{$i} {
+        flex: 0 1 auto;
+        width: $i * 100% / $col-count;
+      }
+    }
+  }
+}
+
+@mixin col($padding: 8px) {
+  padding: $padding;
+}
+
+@mixin row($padding: 8px) {
+  display: flex;
+  flex-direction: row;
+  margin: (-$padding);
+}

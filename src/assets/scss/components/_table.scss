@@ -1,0 +1,125 @@
+.table {
+  overflow: hidden;
+  overflow-y: auto;
+  i {
+    font-size: 18px;
+  }
+}
+.table-header-row {
+  text-transform: uppercase;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.table-body-row {
+  border-bottom: 1px solid color("border");
+  display: flex;
+  min-height: 56px;
+
+  &:last-child {
+    border: none;
+  }
+
+  &.is-active {
+    position: relative;
+    background-color: color("light-green");
+    &::before {
+      content: "";
+      width: 4px;
+      height: 48px;
+      background-color: color("green");
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      border-radius: 0px 4px 4px 0px;
+    }
+  }
+}
+
+.table-body {
+  border: 1px solid color("border");
+  border-radius: 8px;
+  background-color: color("primary");
+}
+
+.table-col {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+
+  .table-header-row & {
+    padding: 20px 20px;
+  }
+
+  &.table-col-260 {
+    flex-basis: 260px;
+    width: 260px;
+  }
+  &.table-col-240 {
+    flex-basis: 240px;
+    width: 240px;
+  }
+  &.table-col-230 {
+    flex-basis: 230px;
+    width: 230px;
+  }
+  &.table-col-220 {
+    flex-basis: 220px;
+    width: 220px;
+  }
+  &.table-col-215 {
+    flex-basis: 215px;
+    width: 215px;
+  }
+  &.table-col-205 {
+    flex-basis: 205px;
+    width: 205px;
+  }
+  &.table-col-200 {
+    flex-basis: 200px;
+    width: 200px;
+  }
+  &.table-col-185 {
+    flex-basis: 185px;
+    width: 185px;
+  }
+  &.table-col-170 {
+    flex-basis: 170px;
+    width: 170px;
+  }
+  &.table-col-155 {
+    flex-basis: 155px;
+    width: 155px;
+  }
+  &.table-col-150 {
+    flex-basis: 150px;
+    width: 150px;
+  }
+  &.table-col-145 {
+    flex-basis: 145px;
+    width: 145px;
+  }
+  &.table-col-135 {
+    flex-basis: 135px;
+    width: 135px;
+  }
+  &.table-col-130 {
+    flex-basis: 130px;
+    width: 130px;
+  }
+  &.table-col-105 {
+    flex-basis: 105px;
+    width: 105px;
+  }
+  &.table-col-90 {
+    flex-basis: 90px;
+    width: 90px;
+  }
+  &.table-col-80 {
+    flex-basis: 80px;
+    width: 80px;
+  }
+}

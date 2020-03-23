@@ -1,0 +1,26 @@
+.school {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 34px;
+  padding-right: 42px;
+  i {
+    font-size: 11px;
+  }
+}
+
+.school-name {
+  display: block;
+  margin-left: 16px;
+}
+
+.school-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.school-avatar-media {
+  @extend %img-contain;
+}

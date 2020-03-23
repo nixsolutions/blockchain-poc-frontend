@@ -1,0 +1,151 @@
+.nav {
+  padding: 32px 0;
+  border-top: 1px solid color("border");
+}
+
+.nav-sub-list {
+  display: none;
+  .is-open-sub-nav &{
+    display: block;
+  }
+}
+
+.nav-item {
+  margin-bottom: 8px;
+  .nav-sub-list & {
+    border-bottom: 1px solid color("border");
+    background-color: color("bg-light");
+    margin-bottom: 0;
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  height: 56px;
+  padding: 13px 32px;
+  padding-right: 42px;
+  position: relative;
+  color: color("light-title");
+  @extend %default-transition;
+  &:hover {
+    background-color: color("bg");
+    color: color("accent");
+    &::before {
+      opacity: 1;
+    }
+    .nav-sub-list & {
+      background-color: color("bg-light");
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.is-active {
+    background-color: color("bg");
+    color: color("accent");
+    &::before {
+      opacity: 1;
+    }
+    .nav-sub-list & {
+      background-color: color("bg-light");
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    background-color: color("accent");
+    opacity: 0;
+    @extend %default-transition;
+  }
+
+  .nav-sub-list & {
+    font-size: 14px;
+    padding-left: 73px;
+  }
+}
+
+.nav-title {
+  margin-left: 10px;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border-radius: 100%;
+  background-color: color("bg");
+  @extend %default-transition;
+  .nav-link:hover & {
+    background-color: color("accent-light");
+  }
+  .is-active & {
+    background-color: color("accent-light");
+  }
+  &::before {
+    @extend %default-transition;
+    .is-active & {
+      color: color("accent");
+    }
+    .nav-link:hover & {
+      color: color("accent");
+    }
+  }
+}
+
+.nav-icon-arrow {
+  font-size: 11px;
+  margin-left: 10px;
+  .is-active & {
+    transform: rotate(180deg);
+  }
+  &::before {
+    @extend %default-transition;
+    .is-active & {
+      color: color("accent");
+    }
+    .nav-link:hover & {
+      color: color("accent");
+    }
+  }
+}
+
+.notify-mark {
+  color: color("green");
+  background-color: color("light-green");
+  display: block;
+  min-width: 30px;
+  height: 22px;
+  text-align: center;
+  border-radius: 11px;
+  line-height: 22px;
+  padding: 0 11px;
+  margin-left: auto;
+  @extend %default-transition;
+  .nav-link:hover & {
+    color: color("accent");
+    background-color: color("accent-light");
+  }
+  .is-active & {
+    color: color("accent");
+    background-color: color("accent-light");
+  }
+}

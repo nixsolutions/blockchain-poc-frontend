@@ -1,0 +1,58 @@
+.btn {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  line-height: 17px;
+  background-color: color("accent");
+  color: color("primary");
+  border-radius: 4px;
+  padding: 4px 17px;
+  height: 26px;
+  min-width: 88px;
+  @extend %default-transition;
+
+  &:hover {
+    color: color("primary");
+    background-color: color("accent-hover");
+  }
+
+  &.btn-full {
+    min-width: 100%;
+    height: 40px;
+    line-height: 30px;
+  }
+}
+
+.btn-stroke {
+  @extend .btn;
+  background-color: transparent;
+  border: 1px solid color("accent");
+  color: color("accent");
+  white-space: nowrap;
+}
+
+.btn-white {
+  padding: 4px 17px;
+  min-width: 96px;
+  text-align: center;
+  background-color: color("primary");
+  border-radius: 16px;
+  border: 1px solid color("border");
+  color: color("title");
+  height: 32px;
+  line-height: 23px;
+  @extend %default-transition;
+  &:hover {
+    background-color: color("border");
+  }
+}
+
+.btn-close {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  font-size: 16px;
+}

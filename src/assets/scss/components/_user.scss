@@ -1,0 +1,25 @@
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 34px;
+  padding-right: 42px;
+  i {
+    font-size: 11px;
+  }
+}
+
+.user-name {
+  display: block;
+  margin-left: 16px;
+  &.big {
+    font-size: 18px;
+  }
+}
+
+.user-role {
+  display: block;
+  margin-left: 16px;
+  font-size: 12px;
+  color: color("light-title");
+}

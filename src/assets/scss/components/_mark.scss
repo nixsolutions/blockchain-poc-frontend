@@ -1,0 +1,22 @@
+.mark {
+  height: 24px;
+  background-color: color("bg");
+  color: color("accent");
+  border-radius: 12px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 14px;
+
+  &.is-accept {
+    background-color: color("light-green");
+    color: color("green");
+  }
+  &.is-sent {
+    background-color: color("bg");
+    color: color("light-title");
+  }
+  &.is-rejected {
+    background-color: color("light-red");
+    color: color("red");
+  }
+}

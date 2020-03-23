@@ -1,0 +1,136 @@
+body {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 14px;
+  color: color("title");
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1 auto;
+  min-height: 0%;
+  background-color: color("bg-light");
+}
+
+.main-content {
+  padding: 10px 0 56px;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 56px;
+  height: 100%;
+  @extend %default-transition;
+}
+
+.section {
+  height: 100%;
+  border: 1px solid color("border");
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-head {
+  background-color: color("primary");
+  border-bottom: 1px solid color("border");
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.section-body {
+  padding: 16px;
+  background-color: color("bg");
+  border-radius: 0 0 8px 8px;
+  flex: 1 1 auto;
+}
+
+.section-inner {
+  background-color: color("primary");
+  border-radius: 8px;
+  flex: 1 1 auto;
+}
+
+.section-bordered {
+  border-radius: 8px;
+  background-color: color("primary");
+  border: 1px solid color("border");
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.border {
+  border: 1px solid color("border");
+}
+
+.bg-accent {
+  background: transparent radial-gradient(closest-side at 50% 50%, #68BDFF 0%, #2196F3 100%) 0% 0% no-repeat padding-box;
+}
+
+
+.row {
+  @include row;
+  flex-wrap: wrap;
+  & > [class*="col-"] {
+    @include col;
+  }
+  &.m-col {
+    @media (max-width: $breakpoint-xs-max) {
+      flex-direction: column;
+      margin: 0;
+      & > [class*="col-"] {
+        padding: $padding;
+      }
+    }
+  }
+  & > .grid-item {
+    @include col;
+  }
+}
+
+@media (min-width: 0) {
+  @include col-width(null);
+}
+
+@media (min-width: $breakpoint-xs-min) {
+  @include col-width(xs);
+}
+
+@media (min-width: $breakpoint-sm-min) {
+  @include col-width(sm);
+}
+
+@media (min-width: $breakpoint-md-min) {
+  @include col-width(md);
+}
+
+@media (min-width: $breakpoint-lg-min) {
+  @include col-width(lg);
+}
+
+@media (min-width: $breakpoint-rg-min) {
+  @include col-width(rg);
+}
+
+@media (min-width: $breakpoint-xl-min) {
+  @include col-width(xl);
+}

@@ -1,0 +1,24 @@
+.form-file-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.form-file-label {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color("accent-light");
+}
+
+.form-file-label-icon {
+  &::before {
+    color: color("accent");
+  }
+}

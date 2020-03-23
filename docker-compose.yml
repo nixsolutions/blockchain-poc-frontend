@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+
+  node:
+    build: .
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "8081"
+    ports:
+      - 3030:8081
+    command: "sh -c 'npm install && npm start' && apk update && apk add curl curl-dev bash"
+    networks:
+      byfn:
+        ipv4_address: 70.10.0.105
+#            http://70.10.0.105:3030/
+
+
+networks:
+  byfn:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 70.10.0.0/24

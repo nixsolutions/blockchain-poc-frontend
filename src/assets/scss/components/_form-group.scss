@@ -1,0 +1,48 @@
+.form-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.form-control {
+  font-family: $mainFont;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid color("border");
+  box-sizing: border-box;
+  padding: 11px 20px;
+  padding-left: 42px;
+  &::-webkit-input-placeholder {
+    font-family: $mainFont;
+    color: color("plaseholder");
+  }
+  &::-moz-placeholder {
+    color: color("plaseholder");
+    font-family: $mainFont;
+  }
+  &:-ms-input-placeholder {
+    color: color("plaseholder");
+    font-family: $mainFont;
+  }
+  &:-moz-placeholder {
+    color: color("plaseholder");
+    font-family: $mainFont;
+  }
+}
+
+.form-control-icon {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.form-label {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

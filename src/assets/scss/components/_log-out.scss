@@ -1,0 +1,14 @@
+.log-out {
+  display: flex;
+  align-items: center;
+  padding: 13px 32px;
+  @extend %default-transition;
+}
+
+.log-out-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

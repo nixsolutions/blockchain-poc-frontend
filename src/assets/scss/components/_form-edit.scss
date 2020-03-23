@@ -1,0 +1,45 @@
+.form-edit-group {
+  width: 55px;
+  //display: none;
+}
+
+.form-edit-control {
+  font-family: $mainFont;
+  padding: 0 5px;
+  font-size: 14px;
+  color: color("title");
+  box-sizing: border-box;
+  height: 32px;
+  width: 100%;
+  border: 1px solid color("border");
+  border-radius: 4px;
+  &::-webkit-input-placeholder {
+    font-family: $mainFont;
+    color: color("title");
+    font-size: 14px;
+  }
+  &::-moz-placeholder {
+    color: color("title");
+    font-family: $mainFont;
+    font-size: 14px;
+  }
+  &:-ms-input-placeholder {
+    color: color("title");
+    font-family: $mainFont;
+    font-size: 14px;
+  }
+  &:-moz-placeholder {
+    color: color("title");
+    font-family: $mainFont;
+    font-size: 14px;
+  }
+}
+
+.form-edit-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}

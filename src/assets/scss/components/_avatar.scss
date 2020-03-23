@@ -1,0 +1,26 @@
+.avatar {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  padding: 2px;
+  border: 2px solid color("border");
+
+  &.is-active {
+    border-color: color("accent");
+  }
+
+  &.is-big {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.is-large {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.avatar-media {
+  @extend %img-contain;
+}

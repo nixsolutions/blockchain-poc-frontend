@@ -1,0 +1,23 @@
+.children-info-list {
+  display: flex;
+  margin-bottom: 22px;
+  margin-left: 16px;
+}
+
+.children-info-item {
+  padding: 0 16px;
+  border-right: 1px solid color("border");
+  display: flex;
+  align-items: center;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    border: none;
+  }
+}
+
+.children-info-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}

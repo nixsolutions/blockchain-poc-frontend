@@ -1,0 +1,30 @@
+.school-info-list {
+  &.is-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 29px;
+  }
+}
+
+.school-info-item {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  .is-row & {
+    padding: 3px 16px;
+    margin-bottom: 0;
+    border-right: 1px solid color("border");
+  }
+  &:last-child {
+    margin-bottom: 0;
+    .is-row & {
+      border-right: none;
+    }
+  }
+  &:first-child {
+    .is-row & {
+      padding-left: 0;
+    }
+  }
+}

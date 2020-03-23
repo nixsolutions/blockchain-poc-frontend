@@ -1,0 +1,36 @@
+.children-list {
+  width: 100%;
+  &.is-row {
+    width: auto;
+    display: flex;
+    padding: 8px;
+    background-color: color("bg");
+    border-radius: 8px;
+  }
+}
+
+.children-item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .is-row & {
+    width: 296px;
+    margin-bottom: 0;
+    background-color: color("primary");
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    .is-row & {
+      margin-right: 0;
+    }
+  }
+
+  .hospitals & {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

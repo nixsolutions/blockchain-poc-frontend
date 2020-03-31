@@ -27,7 +27,7 @@ We build the application and run it on port 8080:
 docker build. -t my-app
 docker run -d -p 8080: 80 my-app
 ```
-Now this front-end application will be available at http: // <HOST>: 8080, where <HOST> is the server address.
+Now this front-end application will be available at `http://<HOST>:8080`, where `<HOST>` is the server address.
 
 Login for different roles - parents, hospital and kindergarten. The password for all roles is password.
 

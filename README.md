@@ -32,4 +32,4 @@ Now this front-end application will be available at `http://<HOST>:8080`, where 
 Login for different roles - parents, hospital and kindergarten. The password for all roles is password.
 
 ## License
-The project is developed by [NIX Solutions](http://nixsolutions.com) Go team and distributed under [MIT LICENSE](https://github.com/nixsolutions/blockchain-poc-frontend/master/LICENSE)
+The project is developed by [NIX Solutions](http://nixsolutions.com) Go team and distributed under [MIT LICENSE](https://github.com/nixsolutions/blockchain-poc-frontend/blob/master/LICENSE)

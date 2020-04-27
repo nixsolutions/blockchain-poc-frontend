@@ -6,7 +6,7 @@ To install the application on the server, you must clone it from this repository
 
 ```
 cd ~
-git clone https://gitlab.nixdev.co/poc-blockchain/front.git
+git clone https://github.com/nixsolutions/blockchain-poc-frontend.git
 ```
 
 Insert the server name and port number in which the front-end application will be located in the .env file:
